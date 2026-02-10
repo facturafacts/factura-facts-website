@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { Calculator, Building2, TrendingUp, FileCheck } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Services() {
   const services = [
@@ -33,39 +32,40 @@ export default function Services() {
       <Navbar />
       
       {/* Header */}
-      <section className="bg-brand-dark text-white py-20">
+      <section className="bg-brand-dark text-white py-24 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-light mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6">
             OUR SERVICES
           </h1>
-          <div className="w-24 h-1 bg-brand-gold mx-auto"></div>
+          <div className="w-16 h-px bg-brand-gold mx-auto"></div>
         </div>
       </section>
 
       {/* Services List */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-24 lg:py-32 bg-brand-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-24">
+          <div className="space-y-20">
             {services.map((service, index) => (
-              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center`}>
+              <div key={index} className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center`}>
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="aspect-video bg-brand-cream rounded-xl overflow-hidden flex items-center justify-center">
-                    <service.icon className="w-20 h-20 text-brand-gold" />
+                  <div className="aspect-[4/3] bg-white rounded-2xl overflow-hidden border border-brand-hairline shadow-card flex items-center justify-center">
+                    <service.icon className="w-20 h-20 text-brand-gold" strokeWidth={1.5} />
                   </div>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-brand-text mb-4">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-brand-text mb-6 tracking-tight">
                     {service.title}
                   </h2>
-                  <p className="text-lg text-brand-text-light mb-6">
+                  <div className="w-12 h-px bg-brand-gold mb-6"></div>
+                  <p className="text-lg text-brand-text-light leading-relaxed mb-8">
                     {service.description}
                   </p>
                   <Link
                     href="/#contact"
-                    className="inline-flex items-center gap-2 text-brand-dark font-medium hover:text-brand-gold transition-colors"
+                    className="inline-flex items-center gap-2 text-brand-dark font-medium hover:text-brand-gold transition-colors group"
                   >
                     Ask us a Question
-                    <span className="text-xl">→</span>
+                    <span className="text-xl group-hover:translate-x-1 transition-transform">→</span>
                   </Link>
                 </div>
               </div>

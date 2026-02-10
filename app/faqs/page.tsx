@@ -31,29 +31,33 @@ export default function FAQs() {
       <Navbar />
       
       {/* Header */}
-      <section className="bg-brand-dark text-white py-20">
+      <section className="bg-brand-dark text-white py-24 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-light">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight">
             FAQs
           </h1>
+          <div className="w-16 h-px bg-brand-gold mx-auto mt-6"></div>
         </div>
       </section>
 
       {/* FAQs List */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
+      <section className="py-24 lg:py-32 bg-brand-cream">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-brand-cream rounded-xl p-8">
-                <div className="flex gap-4">
+              <div key={index} className="bg-white rounded-2xl p-8 border border-brand-hairline shadow-card hover:shadow-elevated transition-shadow duration-300">
+                <div className="flex gap-5">
                   <div className="flex-shrink-0">
-                    <HelpCircle className="w-8 h-8 text-brand-gold" />
+                    <div className="w-10 h-10 bg-brand-cream rounded-xl flex items-center justify-center">
+                      <HelpCircle className="w-5 h-5 text-brand-gold" />
+                    </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-brand-text mb-3">
+                    <h3 className="text-lg font-semibold text-brand-text mb-3">
                       {faq.question}
                     </h3>
-                    <p className="text-brand-text-light text-lg leading-relaxed">
+                    <div className="w-8 h-px bg-brand-hairline mb-3"></div>
+                    <p className="text-brand-text-light leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>

@@ -9,14 +9,25 @@ module.exports = {
     extend: {
       colors: {
         'brand': {
-          dark: '#1a1a2e',      // Dark navy header
-          beige: '#d4c4a8',     // Beige background
-          gold: '#c9b037',      // Gold/yellow accent
+          dark: '#1a1a2e',
+          beige: '#d4c4a8',
+          gold: '#c9b037',
           'gold-hover': '#b89d2f',
-          cream: '#f5f0e6',     // Light cream background
-          text: '#2d2d2d',      // Dark text
-          'text-light': '#666666',
+          cream: '#faf9f6',
+          'cream-dark': '#f5f3ef',
+          text: '#1a1a1a',
+          'text-light': '#4a4a4a',
+          'text-muted': '#6b6b6b',
+          hairline: '#e5e5e5',
         }
+      },
+      boxShadow: {
+        'soft': '0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02)',
+        'card': '0 4px 6px -1px rgba(0,0,0,0.03), 0 2px 4px -1px rgba(0,0,0,0.02)',
+        'elevated': '0 10px 15px -3px rgba(0,0,0,0.04), 0 4px 6px -2px rgba(0,0,0,0.02)',
+      },
+      borderRadius: {
+        '4xl': '2rem',
       }
     },
   },

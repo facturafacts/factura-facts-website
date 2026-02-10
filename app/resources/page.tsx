@@ -32,45 +32,41 @@ export default function Resources() {
       <Navbar />
       
       {/* Header */}
-      <section className="bg-brand-dark text-white py-20">
+      <section className="bg-brand-dark text-white py-24 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-light mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6">
             RESOURCES
           </h1>
-          <div className="w-24 h-1 bg-brand-gold mx-auto"></div>
+          <div className="w-16 h-px bg-brand-gold mx-auto"></div>
         </div>
       </section>
 
       {/* Resources Grid */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-24 lg:py-32 bg-brand-cream">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resources.map((resource, index) => (
               <a
                 key={index}
                 href={resource.url}
                 target={resource.type === 'external' ? '_blank' : undefined}
                 rel={resource.type === 'external' ? 'noopener noreferrer' : undefined}
-                className="group bg-brand-cream rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
+                className="group bg-white rounded-2xl overflow-hidden border border-brand-hairline shadow-card hover:shadow-elevated transition-all duration-300"
               >
-                <div className="aspect-video bg-brand-beige flex items-center justify-center">
-                  <FileText className="w-16 h-16 text-brand-gold" />
+                <div className="aspect-[4/3] bg-brand-cream flex items-center justify-center border-b border-brand-hairline">
+                  <FileText className="w-16 h-16 text-brand-gold/60" strokeWidth={1.5} />
                 </div>
                 <div className="p-6">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h3 className="text-xl font-semibold text-brand-text mb-2 group-hover:text-brand-gold transition-colors">
-                        {resource.title}
-                      </h3>
-                      <p className="text-brand-text-light mb-4">
-                        {resource.description}
-                      </p>
-                    </div>
-                    <resource.icon className="w-6 h-6 text-brand-gold flex-shrink-0" />
-                  </div>
-                  <span className="inline-flex items-center gap-2 text-brand-dark font-medium text-sm">
+                  <h3 className="text-lg font-semibold text-brand-text mb-2 group-hover:text-brand-gold transition-colors line-clamp-2">
+                    {resource.title}
+                  </h3>
+                  <div className="w-8 h-px bg-brand-hairline mb-3"></div>
+                  <p className="text-brand-text-light text-sm mb-4 line-clamp-2">
+                    {resource.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-brand-dark font-medium text-sm group-hover:text-brand-gold transition-colors">
                     {resource.type === 'external' ? 'Visit Resource' : 'Download PDF'}
-                    <span>↗</span>
+                    <resource.icon className="w-4 h-4" />
                   </span>
                 </div>
               </a>
