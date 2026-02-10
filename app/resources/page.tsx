@@ -28,21 +28,21 @@ export default function Resources() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-brand-cream">
       <Navbar />
       
       {/* Header */}
-      <section className="bg-brand-600 text-white py-20">
+      <section className="bg-brand-dark text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-light mb-4">
             RESOURCES
           </h1>
-          <div className="w-24 h-1 bg-white mx-auto"></div>
+          <div className="w-24 h-1 bg-brand-gold mx-auto"></div>
         </div>
       </section>
 
       {/* Resources Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource, index) => (
@@ -51,24 +51,24 @@ export default function Resources() {
                 href={resource.url}
                 target={resource.type === 'external' ? '_blank' : undefined}
                 rel={resource.type === 'external' ? 'noopener noreferrer' : undefined}
-                className="group bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
+                className="group bg-brand-cream rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-video bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center">
-                  <FileText className="w-16 h-16 text-brand-400" />
+                <div className="aspect-video bg-brand-beige flex items-center justify-center">
+                  <FileText className="w-16 h-16 text-brand-gold" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-600 transition-colors">
+                      <h3 className="text-xl font-semibold text-brand-text mb-2 group-hover:text-brand-gold transition-colors">
                         {resource.title}
                       </h3>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-brand-text-light mb-4">
                         {resource.description}
                       </p>
                     </div>
-                    <resource.icon className="w-6 h-6 text-brand-600 flex-shrink-0" />
+                    <resource.icon className="w-6 h-6 text-brand-gold flex-shrink-0" />
                   </div>
-                  <span className="inline-flex items-center gap-2 text-brand-600 font-medium text-sm">
+                  <span className="inline-flex items-center gap-2 text-brand-dark font-medium text-sm">
                     {resource.type === 'external' ? 'Visit Resource' : 'Download PDF'}
                     <span>↗</span>
                   </span>

@@ -27,33 +27,33 @@ export default function FAQs() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-brand-cream">
       <Navbar />
       
       {/* Header */}
-      <section className="bg-brand-600 text-white py-20">
+      <section className="bg-brand-dark text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-4xl md:text-5xl font-light">
             FAQs
           </h1>
         </div>
       </section>
 
       {/* FAQs List */}
-      <section className="py-20 bg-white">
+      <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8">
+              <div key={index} className="bg-brand-cream rounded-xl p-8">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
-                    <HelpCircle className="w-8 h-8 text-brand-600" />
+                    <HelpCircle className="w-8 h-8 text-brand-gold" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-semibold text-brand-text mb-3">
                       {faq.question}
                     </h3>
-                    <p className="text-gray-600 text-lg leading-relaxed">
+                    <p className="text-brand-text-light text-lg leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
