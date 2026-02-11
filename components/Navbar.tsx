@@ -13,6 +13,7 @@ export default function Navbar() {
     { href: '/services', label: 'Services' },
     { href: '/faqs', label: 'FAQs' },
     { href: '/resources', label: 'Resources' },
+    { href: '/booking', label: 'Book Consultation' },
   ]
 
   return (
