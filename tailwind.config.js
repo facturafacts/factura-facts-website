@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'gotham': ['Gotham', 'sans-serif'],
+        'europa': ['Europa', 'sans-serif'],
+      },
       colors: {
         'brand': {
           dark: '#1a1a2e',
@@ -19,7 +23,11 @@ module.exports = {
           'text-light': '#4a4a4a',
           'text-muted': '#6b6b6b',
           hairline: '#e5e5e5',
-        }
+        },
+        // Mapped from Brand Book CMYK:
+        'factura-red': '#ED1C24',
+        'factura-yellow': '#FFCC00',
+        'factura-blue': '#00AEEF',
       },
       boxShadow: {
         'soft': '0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02)',
